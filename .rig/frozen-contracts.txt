@@ -1,0 +1,4 @@
+# Frozen contracts — DO NOT EDIT
+# Any edits require explicit approval and must go through incident regression
+
+contracts/v1/tool_registry.py

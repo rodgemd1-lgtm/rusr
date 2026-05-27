@@ -1,0 +1,73 @@
+[project]
+name = "rusr"
+version = "0.1.0"
+description = "RUSR — Universal Studio Hardening Layer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.10.0",
+    "pyyaml>=6.0.2",
+    "python-pptx>=0.6.24",
+    "openpyxl>=3.1.5",
+    "jinja2>=3.1.4",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+    "ruff>=0.9.0",
+    "mypy>=1.14.0",
+    "pre-commit>=4.0.0",
+    "pygount>=1.6.1",
+]
+test = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+    "pytest-mock>=3.14.0",
+    "pytest-cov>=6.0.0",
+    "responses>=0.25.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "PGH"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.coverage.run]
+source = ["rusr", "contracts", "workflows"]
+omit = ["tests/*", "**/__pycache__"]
+
+[tool.coverage.report]
+fail_under = 80
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+hardening = [
+    "pydantic>=2.10.0",
+    "pyyaml>=6.0.2",
+    "pydantic-settings>=2.7.0",
+]
+cockpit = [
+    "react>=18.0.0",
+    "typescript>=5.0.0",
+]
