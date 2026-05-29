@@ -9,7 +9,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from enum import Enum
 from typing import Any, Literal, Annotated
-from uuid import uuid7
+from uuid_extensions import uuid7
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
