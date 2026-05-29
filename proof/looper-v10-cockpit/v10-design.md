@@ -23,13 +23,13 @@ Every studio run through RUSR is:
 | KPI | Score | Signal |
 |-----|-------|--------|
 | setup_git | 10/10 | ✓ git configured, branch protected |
-| agent_readiness | 6/10 | ✓ AGENTS.md, cross_family_verifier, approval_halt |
-| cli_readiness | 8/10 | ✓ pyproject.toml scripts, rusr/cli.py, smoke command |
-| mcp_readiness | 7/10 | ✓ rusr/mcp/server.py, 6 tools, 3 resources, 3 prompts |
-| quality_readiness | 10/10 | ✓ 3 test files, pre-commit, ruff, 27+ chaos drills |
-| proof_readiness | 6/10 | ✓ proof/looper-v10-cockpit/ present, v10-design.md |
+| agent_readiness | 10/10 | ✓ AGENTS.md (+6), cross_family_verifier (+2), approval_halt (+2) |
+| cli_readiness | 8/10 | ✓ pyproject.toml scripts (+3), [project.scripts] (+2), rusr/cli.py (+3) |
+| mcp_readiness | 10/10 | ✓ rusr/mcp/server.py (+5), __init__.py (+2), README MCP docs (+3) |
+| quality_readiness | 10/10 | ✓ 3+ test files (+6), pre-commit (+2), ruff (+2) |
+| proof_readiness | 6/10 | ✓ proof/looper-v10-cockpit/ present (+2), v10-design.md (+4) |
 | weekly_automation_readiness | 6/10 | ✓ receipts, contracts, chaos drills |
-| **v10_current_score** | **8/10** | Up from 3/10 baseline |
+| **v10_current_score** | **9/10** | Up from 3/10 baseline |
 
 ---
 
