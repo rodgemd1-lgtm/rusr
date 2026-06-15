@@ -12,4 +12,8 @@ build/
 dist/
 .DS_Store
 *.swp
-*.swo
+*.swo.venv/
+venv/
+*.log
+.turbo/
+.cache/
